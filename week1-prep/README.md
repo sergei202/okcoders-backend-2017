@@ -1,7 +1,7 @@
 Class Preparation
 ====
 
-Welcome the 2017 OkCoders Backend course!
+Welcome the 2017 Tulsa OKCoders Backend course!
 
 You will need a few pieces of software for class, all of which are free:
 - An IDE/editor ([Atom](https://atom.io/), Sublime, etc.  Atom is preferred)

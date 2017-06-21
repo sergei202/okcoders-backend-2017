@@ -1,7 +1,7 @@
 Windows Instructions
 ====
 
-You must be running a recent version of Windows, at least Windows Vista or higher. Windows 7 or higher is strongly recommended. Ensure that you have installed the latest Windows updates for you version of windows.
+You must be running a recent version of Windows, Windows 7 or higher is strongly recommended. Ensure that you have installed the latest Windows updates for you version of windows.
 
 ## Install software
 
@@ -38,12 +38,6 @@ Set your global git username and password. At the terminal, type the following t
 **Install MongoDB**:  Follow the instructions at [mongodb.com](https://www.mongodb.com)
 
 **Install RoboMongo**:  RoboMongo is an excellent open-source GUI for MongoDB.  Download it here: [robomongo.org](https://robomongo.org/download)
-
-## Set Up Heroku (optional)
-
-Sign up for a free account at Heroku: [https://www.heroku.com/](https://www.heroku.com/)
-
-Install the Heroku Command Line Interface: Follow the instructions at [https://devcenter.heroku.com/articles/heroku-command](https://devcenter.heroku.com/articles/heroku-command). Note you will need to install the Heroku Toolbelt.
 
 ## Set up your SSH keys
 

@@ -70,12 +70,6 @@ Set your global git username and password. At the terminal, type the following t
 **Install RoboMongo**:  RoboMongo is an excellment open-source GUI for MongoDB.  Download it here: [robomongo.org](https://robomongo.org/download)
 
 
-## Set Up Heroku (optional)
-
-Sign up for a free account at Heroku: [https://www.heroku.com/](https://www.heroku.com/)
-
-Install the Heroku Command Line Interface: Follow the instructions at [https://devcenter.heroku.com/articles/heroku-command](https://devcenter.heroku.com/articles/heroku-command). Note you will need to install the Heroku Toolbelt.
-
 ## Set up your SSH keys
 
 SSH Keys are used to establish a secure connection to GitHub and Heroku.
