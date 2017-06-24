@@ -24,3 +24,7 @@ app.get('/counter', function(req,res) {
 	counter++;
 	res.send('<h1>Counter: ' + counter + '</h1>');
 });
+
+app.get('/dump', function(req,res) {
+	res.json(req.headers);
+});
