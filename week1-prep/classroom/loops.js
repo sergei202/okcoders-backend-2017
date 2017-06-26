@@ -1,7 +1,7 @@
 // Loop and output index 5 times
 // for(var i=0;i<5;i++) console.log(i);
 
-// Count indefinitely
+// Count indefinitely.  You will need to use Ctrl-C to kill node to stop the program.
 // var i=0;
 // for(;;) console.log(i++);
 
@@ -16,4 +16,4 @@ numbers.forEach(function(n,index,array) {
 });
 
 // Define an inline array and output to console.  forEach passes: element,index,array
-[1,3,5,7,9,11].forEach(console.log);
+// [1,3,5,7,9,11].forEach(console.log);

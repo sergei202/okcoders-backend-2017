@@ -28,3 +28,10 @@ app.get('/counter', function(req,res) {
 app.get('/dump', function(req,res) {
 	res.json(req.headers);
 });
+
+app.get('/add/:x/:y', function(req,res) {
+	var x = Number(req.params.x);
+	var y = Number(req.params.y);
+	var result = x + y;
+	res.send('You sent <b>' + x + '</b> and <b>' + y + '</b>.  Those added together is: <b>' + result + '</b>.');
+});

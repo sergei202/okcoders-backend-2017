@@ -17,3 +17,9 @@ Instructions are provided for Mac and Windows computers.  If you are a Linux use
 If you are not familiar with the command line, expect to spend a couple hours on this.
 
 Refer to the [**mac-setup**](https://github.com/sergei202/okcoders-backend-2017/blob/master/week1-prep/mac-setup.md) or [**windows-setup**](https://github.com/sergei202/okcoders-backend-2017/blob/master/week1-prep/windows-setup.md) file for additional instructions depending on your OS.
+
+Classroom Examples and Express
+----
+See [**classroom**](https://github.com/sergei202/okcoders-backend-2017/blob/master/week1-prep/classroom.md) to review the examples we did in class.
+
+See [**express**](https://github.com/sergei202/okcoders-backend-2017/blob/master/week1-prep/express.md) for an overview of ExpressJS which we will dive into next week!
