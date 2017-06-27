@@ -44,7 +44,7 @@ Save the code above as `hello.js` and run with `node hello.js`.  Point your web 
 
 
 ## Math Server
-Let's create a simple server that can do math for us using routes:
+Let's create a new express program that can do math for us using routes:
 
 `/add/10/55` with return `65`
 
@@ -76,7 +76,7 @@ app.get('/add/:x/:y', function(req,res) {
 });
 ```
 
-Save and run our program!  Visit http://localhost:3000/add/100/500 to test it.
+Save this as `math.js` and run our program!  Visit http://localhost:3000/add/100/500 to test it.
 
 Wait, something doesn't seem right.  We should have gotten `600` but instead we got `100500`.  What's going on??
 

@@ -1,11 +1,13 @@
 ExpressJS Homework
 ====
 
-Let's make sure everyone is comfortable creating and working with express route handlers.  We'll start by adding to our Express Math Server.
+Let's make sure everyone is comfortable creating and working with express route handlers.
+
+Take the code from the `math.js` example from **[express](https://github.com/sergei202/okcoders-backend-2017/blob/master/week1-prep/express.md)** and save it as `homework.js`.
 
 ### Subtract, Multiply and Divide
 
-Take the `math.js` example from **[express](https://github.com/sergei202/okcoders-backend-2017/blob/master/week1-prep/express.md)** and add routes for us to be able to do subtraction, multiplication and division.
+Add routes for us to be able to do subtraction, multiplication and division.
 
 ### Dice
 
@@ -13,13 +15,13 @@ Add another route `/dice` that will return a random number between 1 and 6.
 
 We'll use the `randomRange()` function we wrote in [**random.js**](https://github.com/sergei202/okcoders-backend-2017/blob/master/week1-prep/classroom/random.js).
 
-First simply copy the function into our program and get it working.
+First simply copy the function into `homework.js` and get it working.
 
-After that is successful, remove the function and then  try using `require()` to include our random module and reference our function that way.
+After that is successful, remove the function and then try using `require()` to include our random module and reference our function that way.
 
 ### Counter
 
-Finally, create a new program called `counter.js`.
+Let's add a counter to our `homework.js`.
 
 Create three routes:
 
