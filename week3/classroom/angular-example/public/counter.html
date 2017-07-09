@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Angular Example - Counter</title>
+		<script src="angular.min.js"></script>
+		<script>
+			var app = angular.module('myFirstApp', []);
+
+			app.controller('CounterCtrl', function($scope,$timeout) {
+				console.log('CounterCtrl started');
+				$scope.count = 0;
+
+				$scope.increase = function() {
+					console.log('increase() called');
+					$scope.count++;
+				};
+				$scope.decrease = function() {
+					console.log('decrease() called');
+					if($scope.count>0) $scope.count--;
+				};
+			});
+
+		</script>
+	</head>
+	<body ng-app="myFirstApp">
+
+		<div ng-controller="CounterCtrl">
+			<p>Count: <b>{{count}}</b></p>
+
+			<input type="button" ng-click="increase()" value="Increase">
+			<input type="button" ng-click="decrease()" value="Go Down">
+		</div>
+
+	</body>
+</html>

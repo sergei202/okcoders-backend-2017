@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Angular Example - List</title>
+		<script src="angular.min.js"></script>
+		<script>
+			var app = angular.module('app', []);
+			app.controller('ListCtrl', function($scope) {
+				console.log('ListCtrl started');
+
+				// Define our list of item objects
+				$scope.list = [
+					{name:'Eggs'},
+					{name:'Milk'},
+					{name:'Ham'}
+				];
+
+				$scope.addItem = function() {
+					// Push a new item to our list.  This needs to be an object
+					$scope.list.push({
+						name: $scope.newItem
+					});
+					// Reset newItem to a blank string
+					$scope.newItem = '';
+				};
+
+				$scope.removeItem = function(item) {
+					console.log('removeItem()\t item=', item);
+					// find the index of the item we want to remove
+					var index = $scope.list.indexOf(item);
+					// Remove the item from our list
+					$scope.list.splice(index,1);
+				};
+			});
+		</script>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="ListCtrl">
+
+			<input type="text" ng-model="newItem">
+			<input type="button" ng-click="addItem()" value="Add" ng-disabled="!newItem || list.length>4">
+
+			<div ng-if="list.length>4" style="text-align:center;color:red">Whoa there!</div>
+
+			<ol>
+				<li ng-repeat="item in list">
+					{{item.name}}
+					<span style="font-size:0.5em; color:red; cursor:pointer" ng-click="removeItem(item)">X</span>
+				</li>
+			<ol>
+		</div>
+	</body>
+</html>

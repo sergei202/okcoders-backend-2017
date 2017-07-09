@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Angular Example - List</title>
+		<script src="angular.min.js"></script>
+		<script>
+			var app = angular.module('app', []);
+			app.controller('ListCtrl', function($scope,$http) {
+				console.log('ListCtrl started');
+
+				function getItems() {
+					$http.get('/list').then(function(res) {
+						$scope.items = res.data;
+						console.log('/list: ', $scope.items);
+					});
+				}
+
+				getItems();
+
+				$scope.addItem = function() {
+					console.log('addItem()\t newItem=', $scope.newItem);
+					$http.get('/list/add/' + $scope.newItem).then(getItems);
+				};
+
+			});
+		</script>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="ListCtrl">
+			<input ng-model="newItem">
+			<input type="button" value="Add" ng-click="addItem()">
+
+			<ul>
+				<li ng-repeat="item in items">
+					{{item}}
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
