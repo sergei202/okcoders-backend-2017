@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Voting</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+		<script>
+			angular.module('voting', [])
+				.controller('VotingCtrl', function($scope) {
+					$scope.catVotes = 0;
+					$scope.dogVotes = 0;
+
+					$scope.voteForCats = function() {
+						$scope.catVotes++;
+					};
+					$scope.voteForDogs = function() {
+						$scope.dogVotes++;
+					};
+				});
+		</script>
+	</head>
+	<body ng-app="voting">
+
+		<div ng-controller="VotingCtrl">
+			<div>Vote for Cats: {{catVotes}}</div>
+			<div>Vote for Dogs: {{dogVotes}}</div>
+
+			<input type="button" value="Vote for Cats" ng-click="voteForCats()">
+			<input type="button" value="Vote for Dogs" ng-click="voteForDogs()">
+
+		</div>
+	</body>
+</html>

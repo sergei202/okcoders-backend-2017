@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Thermostat</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+		<script>
+			angular.module('thermostat', [])
+				.controller('TempCtrl', function($scope) {
+					$scope.temp = 70;
+					$scope.up = function() {
+						$scope.temp++;
+					};
+					$scope.down = function() {
+						$scope.temp--;
+					};
+				});
+		</script>
+	</head>
+	<body ng-app="thermostat">
+
+		<div ng-controller="TempCtrl">
+			The temp is {{temp}}
+
+			<input type="button" value="Up" ng-click="up()" ng-disabled="temp>=80">
+			<input type="button" value="Down" ng-click="down()" ng-disabled="temp<=60">
+		</div>
+	</body>
+</html>

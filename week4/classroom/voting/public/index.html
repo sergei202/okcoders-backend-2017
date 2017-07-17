@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Voting - Serverside</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+		<script>
+			angular.module('voting', [])
+				.controller('VotingCtrl', function($scope,$http) {
+					function getVotes() {
+						$http.get('/votes').then(function(res) {
+							console.log('/votes', res);
+							$scope.catVotes = res.data.catVotes;
+							$scope.dogVotes = res.data.dogVotes;
+						});
+					}
+					getVotes();
+
+					$scope.voted = false;
+
+					$scope.voteForCats = function() {
+						if($scope.voted) return;
+						$scope.voted = true;
+						$http.get('/catVotes/vote').then(getVotes);
+					};
+					$scope.voteForDogs = function() {
+						if($scope.voted) return;
+						$scope.voted = true;
+						$http.get('/dogVotes/vote').then(getVotes);
+					};
+
+				});
+		</script>
+	</head>
+	<body ng-app="voting">
+
+		<div ng-controller="VotingCtrl">
+
+			<div>Vote for Cats: {{catVotes}}</div>
+			<div>Vote for Dogs: {{dogVotes}}</div>
+
+			<div ng-if="!voted">
+				<img src="cat.jpg" width="300px" ng-click="voteForCats()">
+				<img src="dog.jpg" width="300px" ng-click="voteForDogs()">
+			</div>
+
+			<div ng-if="voted">
+				<center>Thank you for your vote</center>
+			</div>
+		</div>
+	</body>
+</html>
