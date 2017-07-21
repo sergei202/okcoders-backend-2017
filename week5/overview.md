@@ -1,5 +1,5 @@
-Overview for Tuesday, July 5th
-==============================
+Overview for Week 5
+===================
 
 MongoDB
 -------
@@ -18,7 +18,7 @@ MongoDB shell version: 3.4.6
 connecting to: test
 >
 ```
-Type `quit()` to exit.  If you received a *command not found* error, check and make sure you installed MongoDB correctly following the instructions for your OS: [OK Coders Prep Guide](https://github.com/sergei202/okcoders-backend/blob/master/00-preparation/README.md).
+Type `quit()` to exit.  If you received a *command not found* error, check and make sure you installed MongoDB correctly following the instructions for your OS: [OK Coders Prep Guide](https://github.com/sergei202/okcoders-backend-2017/tree/master/week1-prep).
 
 If you can run the command but get a `exception: connect failed` message, that means `mongod` is not running, google how to start it on your OS.
 
@@ -59,7 +59,7 @@ We see something like this returned:
 
 Mongoose
 ----------
-Working with MongoDB in Node can be a little cumbersome ([view this example](https://github.com/mongodb/node-mongodb-native) if you don't believe me).  Intead of working directly with MongoDB, we are going to let *Mongoose* do it for us.  [Mongoose](http://mongoosejs.com) is a MongoDB middleware that allows us to abstract *models*.  Models allow us to work with documents through a schema (a specific structure).  Let's see the above *items* example with Mongoose:
+Working with MongoDB in Node can be a little cumbersome ([view this example](https://github.com/mongodb/node-mongodb-native) if you don't believe me).  Instead of working directly with MongoDB, we are going to let *Mongoose* do it for us.  [Mongoose](http://mongoosejs.com) is a MongoDB middleware that allows us to abstract *models*.  Models allow us to work with documents through a schema (a specific structure).  Let's see the above *items* example with Mongoose:
 
 ```js
 var mongoose = require('mongoose');					// Dont forget to 'npm install mongoose'
