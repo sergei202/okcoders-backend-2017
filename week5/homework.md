@@ -54,7 +54,7 @@ function getCounter() {
 
 Let's test our code:
 ```
-getCounter.then(function(counter) {
+getCounter().then(function(counter) {
 	console.log('counter = ', counter);
 });
 ```
