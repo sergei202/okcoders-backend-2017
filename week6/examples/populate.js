@@ -33,8 +33,8 @@ var Author = mongoose.model('Author', {
 var Book = mongoose.model('Book', {
 	// We create a author property that is an ObjectId pointing to our Author model
 	author: {type:mongoose.Schema.Types.ObjectId, ref:'Author'},
-	name: String,	// book's name
-	price: Number	// book's price
+	category: String,	// book's category
+	price: Number		// book's price
 });
 
 // Create some dummy data if it doesn't exist
@@ -62,15 +62,15 @@ function initialize() {
 		// Let's create some books
 		var bookObjs = [
 			// Pierce Brown books
-			{author:authorDocs[0]._id, name:'Red Rising',     isbn:'0553390791'},
-			{author:authorDocs[0]._id, name:'Golden Sun',     isbn:'0345539818'},
-			{author:authorDocs[0]._id, name:'Morning Star',   isbn:'0345539842'},
+			{author:authorDocs[0]._id, name:'Red Rising',     category:'scifi', price:5.99},
+			{author:authorDocs[0]._id, name:'Golden Sun',     category:'scifi', price:10.99},
+			{author:authorDocs[0]._id, name:'Morning Star',   category:'scifi', price:12.99},
 			// Stephen King books
-			{author:authorDocs[1]._id, name:'The Dark Tower', isbn:'3053790796'},
-			{author:authorDocs[1]._id, name:'The Stand',      isbn:'4045239818'},
+			{author:authorDocs[1]._id, name:'The Dark Tower', category:'fiction', price:4.99},
+			{author:authorDocs[1]._id, name:'The Stand',      category:'fiction', price:6.00},
 			// Tim Ferriss books
-			{author:authorDocs[2]._id, name:'The 4-Hour Workweek', isbn:'9780307465351'},
-			{author:authorDocs[2]._id, name:'The 4-Hour Body',     isbn:'9780307465352'}
+			{author:authorDocs[2]._id, name:'The 4-Hour Workweek', category:'selfhelp', price:10.99},
+			{author:authorDocs[2]._id, name:'The 4-Hour Body',     category:'selfhelp', price:7.99}
 		];
 
 		// We're going to again transform our array of objects into an array of documents
