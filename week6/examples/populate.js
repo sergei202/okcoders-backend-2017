@@ -32,6 +32,7 @@ var Author = mongoose.model('Author', {
 // Our Book model with a reference to the Author model
 var Book = mongoose.model('Book', {
 	// We create a author property that is an ObjectId pointing to our Author model
+	name: String,
 	author: {type:mongoose.Schema.Types.ObjectId, ref:'Author'},
 	category: String,	// book's category
 	price: Number		// book's price
@@ -96,8 +97,8 @@ function initialize() {
 
 function display() {
 	return Book
-		.find()					// Find all books.  find({}) would do the same thing
-		.populate('author')		// populate the author property
+		.find({price:{$lte:10}})					// Find all books.  find({}) would do the same thing
+		.populate('author', 'name')		// populate the author property
 		.exec()					// execute our query
 		.then(console.log);		// after the query is done, display the data
 }
