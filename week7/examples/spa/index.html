@@ -7,13 +7,15 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
 		<script src="app.js"></script>
+		<script src="ctrls/page1Ctrl.js"></script>
+		<script src="ctrls/page2Ctrl.js"></script>
 		<style>
 			.main-view {margin-top:50px;}
 		</style>
 	</head>
 	<body ng-app="spaApp">
 
-		<ng-include src="'header.html'"></ng-include>
+		<ng-include src="'views/header.html'"></ng-include>
 
 		<div class="container main-view">
 			<div ng-view></div>
